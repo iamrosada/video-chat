@@ -16,3 +16,15 @@ const PORT = process.env.PORT || 3000;
 app.get("/", (req, res) => {
   res.send("server is listening");
 });
+
+io.on("connection", (socket) => {
+  socket.emit("connection", socket.id);
+
+  socket.on("disconnect", () => {
+    socket.broadcast.emit("disconnect", socket.id);
+  });
+});
+
+server.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
+});
