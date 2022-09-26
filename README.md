@@ -21,11 +21,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 $ git clone git@github.com:iamrosada/video-chat.git
 
 # open the folder of project
-# install depende
-
-
-
-ncies
+# install dependencies
 $ npm install
 ```
 
